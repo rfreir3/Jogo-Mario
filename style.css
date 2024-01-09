@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box
+}
+
+.game-board{
+    background: linear-gradient(to bottom, #024ff7, #90e6f1);
+    width: 100%;
+    height: 399px;
+    border-bottom: 30px solid #33fd00;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#pipe{
+    width: 80px;
+    bottom: 0;
+    position: absolute;
+    animation-name: slidein;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.Mario{
+    width: 135px;
+    bottom: 0px;
+    position: absolute;
+}
+
+.jump{
+    animation: jump 1.5s ease-out;
+}
+
+@keyframes slidein{
+    from{
+        right: -18%;
+    }
+    to{
+        right: 118%;
+    }
+}
+
+@keyframes jump{
+    0%{
+        bottom: 0px;
+    }
+    40%{
+        bottom: 95px;
+    }
+    50%{
+        bottom: 95px;
+    }
+    60%{
+        bottom: 95px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
